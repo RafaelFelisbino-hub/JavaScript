@@ -1,0 +1,46 @@
+<!-- Que informe a área e o volume de um cilindro. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+    <style>
+        p, div{
+            display: inline;
+        }
+    </style>
+    <script>
+        function cilindro(){
+            var altura = parseFloat(document.querySelector("#altura").value);
+            var raio = parseFloat(document.querySelector("#raio").value);
+            var pi = 3.14;
+            var areaLateral, areaBase, areaTotal, volume;
+
+            areaLateral = 2 * pi * raio * altura;
+            areaBase = pi * (raio * raio);
+            areaTotal = 2 * areaBase + areaLateral;
+            volume = areaBase * altura;
+
+            document.querySelector("#resultado1").innerHTML = areaLateral;
+            document.querySelector("#resultado2").innerHTML = areaBase;
+            document.querySelector("#resultado3").innerHTML = areaTotal;
+            document.querySelector("#resultado4").innerHTML = volume;
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Que informe a área e o volume de um cilindro.</h3><br>
+
+    Digite o valor da altura do cilindro: <input type="text" id="altura"><br>
+    Digite o valor do raio do cilindro: <input type="text" id="raio"><br>
+    <button type="button" onclick="cilindro()">Resultado</button><br>
+    <p>Área Lateral:  </p><div id="resultado1"></div><br>
+    <p>Área base:  </p><div id="resultado2"></div><br>
+    <p>Área total:  </p><div id="resultado3"></div><br>
+    <p>Volume:  </p><div id="resultado4"></div><br>
+</body>
+</html>

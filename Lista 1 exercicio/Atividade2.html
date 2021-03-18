@@ -1,0 +1,41 @@
+<!--Calcular a média final (usando a ponderação da UFRN) dadas as notas das 3 provas e
+produzir uma saída com a média e a situação do aluno de acordo com o seguinte critério:
+média >= 7, aprovado; 5 < média < 7, recuperação; média < 5, reprovado.-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atividade 2</title>
+    <script>
+        function mediaFinal()
+        {
+            var a = parseFloat(document.querySelector("#nota1").value); 
+            var b = parseFloat(document.querySelector("#nota2").value); 
+            var c = parseFloat(document.querySelector("#nota3").value); 
+            var media = (a + b + c) / 3;
+            var condicao=['Aprovado','Recuperação','Reprovado']; 
+            
+            if(media >= 7)  document.querySelector("#resultado2").innerHTML = condicao[0]; 
+            else if (media < 7 && media >= 5) document.querySelector("#resultado2").innerHTML = condicao[1];
+            else document.querySelector("#resultado2").innerHTML = condicao[2];
+
+            document.querySelector("#resultado").innerHTML = media;
+        }
+    </script>
+  </head>
+  <body>  
+    <h3>Média de 3 notas</h3> 
+    <form>  
+        Digite a nota da primeira prova: <input type="text" id="nota1"><br> 
+        Digite a nota da segunda prova: <input type="text" id="nota2"><br>  
+        Digite a nota da terceira prova: <input type="text" id="nota3"><br> 
+        
+        <button type="button" onclick="mediaFinal()">Resultado</button><br> 
+    </form>   
+  </body>
+  <p id="resultado"></p> 
+  <p id="resultado2"></p> 
+</html>
+
+<!-- <pre> aceita o texto da forma que foi escrito, como no Word -->

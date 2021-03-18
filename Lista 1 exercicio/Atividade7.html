@@ -1,0 +1,34 @@
+<!-- Para ler 3 números reais do teclado e verificar se o primeiro é maior que a soma dos outros dois. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+    <style>
+        p, div{
+            display: inline;
+        }
+    </style>
+    <script>
+        function maior(){
+        var x = parseFloat(document.querySelector("#x").value);
+        var y = parseFloat(document.querySelector("#y").value);
+        var z = parseFloat(document.querySelector("#z").value);
+
+        if(x > y + z) document.querySelector("#resultado1").innerHTML = x;
+        else alert("O primeiro valor não é maior que a soma dos outros dois");
+        }
+    </script>
+</head>
+<body>
+    <h3>Para ler 3 números reais do teclado e verificar se o primeiro é maior que a soma dos outros dois.</h3><br>
+
+    Digite o numero 1: <input type="text" id="x"><br>
+    Digite o numero 2: <input type="text" id="y"><br>
+    Digite o numero 3: <input type="text" id="z"><br>
+    <button type="button" onclick="maior()">Resultado</button><br>
+    <p>O primeiro valor é maior e é = </p><div id="resultado1"></div>
+</body>
+</html>

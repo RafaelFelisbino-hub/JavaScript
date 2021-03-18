@@ -1,0 +1,39 @@
+<!-- Ler dois números inteiros, x e y, e imprimir o quociente e o resto da divisão inteira entre eles. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+    <style>
+        p, div{
+            display: inline;
+        }
+    </style>
+    <script>
+        function divisao(){
+            var x = parseFloat(document.querySelector("#x").value);
+            console.log(x);
+            var y = parseFloat(document.querySelector("#y").value);
+            console.log(y);
+            var quociente, resto;
+
+            quociente = x / y;
+            resto = x %2;
+
+            document.querySelector("#resultado1").innerHTML = quociente;
+            document.querySelector("#resultado2").innerHTML = resto;
+        }
+    </script>
+</head>
+<body>
+    <h3>Ler dois números inteiros, x e y, e imprimir o quociente e o resto da divisão inteira entre eles.</h3><br>
+    Digite o valor de X: <input type="text" id="x"><br>
+    Digite o valor de Y: <input type="text" id="y"><br>
+    <button type="button" onclick="divisao()">Resultado</button><br>
+    <p>Quociente:  </p><div id="resultado1"></div><br>
+    <p>Resto:  </p><div id="resultado2"></div>
+</body>
+</html>

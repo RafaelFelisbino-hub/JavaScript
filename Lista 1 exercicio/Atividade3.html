@@ -1,0 +1,33 @@
+<!--  Calcular a quantidade dinheiro gasta por um fumante. Dados: o número de anos que ele fuma, o no de cigarros fumados por dia e o preço de uma carteira. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+    <script>
+        function cigarro(){
+            var anos = parseFloat(document.querySelector("#anos").value);
+            var dias = parseFloat(document.querySelector("#dias").value);
+            var preco = parseFloat(document.querySelector("#preco").value);
+            var total;
+
+            anos *= 365;
+            total = (anos / dias) * preco;
+
+            document.querySelector("#resultado").innerHTML = total;
+        }
+        
+    </script>
+</head>
+<body>
+    <h3> Calcular a quantidade dinheiro gasta por um fumante. Dados: o número de anos que ele fuma, o no de cigarros fumados por dia e o preço de uma carteira.</h3><br>
+    Há quantos anos você fuma? <input type="text" id="anos"><br>
+    Quantos cigarros você fuma por dia? <input type="text" id="dias"><br>
+    Qual o preço do maço? <input type="text" id="preco"><br>
+    <button type="button" onclick="cigarro()">Resultado</button>
+    <div id="resultado"></div>    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- Leia a razão de uma PA (Progressão Aritmética) e o seu primeiro e último termos e informe a soma dos elementos dessa PA. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+    <style>
+        p, div{
+            display: inline;
+        }
+    </style>
+    <script>
+        function pa(){
+            var primeiroTermo = parseInt(document.querySelector("#primeiroTermo").value);
+            var ultimoTermo = parseInt(document.querySelector("#ultimoTermo").value);
+            var razao = parseInt(document.querySelector("#razao").value);
+            var i, soma = 0;
+
+            for(i = primeiroTermo; i < ultimoTermo; i++){
+                if(i != primeiroTermo) i += razao - 1;
+                soma += i;
+            }
+
+            document.querySelector("#resultado").innerHTML = soma;
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Leia a razão de uma PA (Progressão Aritmética) e o seu primeiro e último termos e informe a soma dos elementos dessa PA.</h3><br>
+
+    Informe o valor do primeiro termo: <input type="text" id="primeiroTermo"><br>
+    Informe o valor do último termo: <input type="text" id="ultimoTermo"><br>
+    Informe a Razão da PA: <input type="text" id="razao"><br>
+    <button type="button" onclick="pa()">Resultado</button><br>
+    <div id="resultado2"></div>
+    <p>Soma da PA:  </p> <div id="resultado"></div><br>
+</body>
+</html>

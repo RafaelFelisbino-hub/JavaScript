@@ -1,0 +1,48 @@
+<!--  Para ler dois valores reais do teclado, calcular e imprimir na tela:
+a) A soma destes valores
+b) O produto deles
+c) O quociente entre eles -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+    <style>
+        p, div{
+            display: inline;
+        }
+    </style>
+    <script>
+        function valores(){
+            var x = parseFloat(document.querySelector("#x").value);
+            var y = parseFloat(document.querySelector("#y").value);
+            var soma, produto, quociente;
+
+            soma = x + y;
+            produto = x * y;
+            quociente = x / y;
+
+            document.querySelector("#resultado1").innerHTML = soma;
+            document.querySelector("#resultado2").innerHTML = produto;
+            document.querySelector("#resultado3").innerHTML = quociente;
+
+        }
+    </script>
+</head>
+<body>
+    <pre> Para ler dois valores reais do teclado, calcular e imprimir na tela:
+        a) A soma destes valores
+        b) O produto deles
+        c) O quociente entre eles</pre>
+
+        Informe o primeiro valor: <input type="text" id="x"><br>
+        Informe o segundo valor: <input type="text" id="y"><br>
+        <button type="button" onclick="valores()">Resultado</button><br>
+        <p>Soma:  </p><div id="resultado1"></div><br>
+        <p>Produto:  </p><div id="resultado2"></div><br>
+        <p>Quociente:  </p><div id="resultado3"></div><br>
+</body>
+</html>

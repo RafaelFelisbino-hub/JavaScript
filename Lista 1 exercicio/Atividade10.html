@@ -1,0 +1,27 @@
+<!-- Ler 2 números inteiros do teclado (A e B), verificar e imprimir qual deles é o maior, ou a mensagem “A=B” caso sejam iguais. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+    <script>
+        function maior(){
+            var a = parseInt(document.querySelector("#a").value);
+            var b = parseInt(document.querySelector("#b").value);
+
+            if(a > b) alert("A é maior que B");
+            else if(a < b) alert("A é menor que B");
+            else alert("A é igual a B");
+        }
+    </script>
+</head>
+<body>
+    <h3>Ler 2 números inteiros do teclado (A e B), verificar e imprimir qual deles é o maior, ou a mensagem “A=B” caso sejam iguais.</h3><br>
+
+    Digite o valor de A: <input type="text" id="a"><br>
+    Digite o valor de B: <input type="text" id="b"><br>
+    <button type="button" onclick="maior()">Resultado</button>
+</body>
+</html>

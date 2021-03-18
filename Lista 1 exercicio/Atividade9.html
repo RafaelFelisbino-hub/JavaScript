@@ -1,0 +1,28 @@
+<!-- Ler um nome do teclado e ver se é igual ao seu nome. Imprimir conforme o caso: “NOME CORRETO” ou “NOME INCORRETO”. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+    <script>
+        function nome(){
+            var nome = document.querySelector("#nome").value;
+
+            if(nome == 'Rafael' || nome == 'rafael'){
+                alert("Nome correto");
+                document.querySelector("#resultado").innerHTML = nome;
+            } 
+            else alert("Nome Incorreto");
+        }
+    </script>
+</head>
+<body>
+    <h3>Ler um nome do teclado e ver se é igual ao seu nome. Imprimir conforme o caso: “NOME CORRETO” ou “NOME INCORRETO”.</h3>
+
+    Tente acertar meu nome: <input type="text" id="nome"><br>
+    <button type="button" onclick="nome()">Resultado</button><br>
+    <div id="resultado"></div>
+</body>
+</html>

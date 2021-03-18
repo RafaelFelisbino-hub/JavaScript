@@ -1,0 +1,20 @@
+<!-- Leia um número e exiba seu sucessor.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atividade 1</title>
+    <script>
+        function sucessor(){
+        var a = parseInt(document.querySelector("#num").value);
+        document.querySelector("#resultado").innerHTML = a +1;
+        }
+    </script>
+    </head>
+  
+<body>
+    Digite um numero: <input type="text" id="num">
+    <button type="button" onclick="sucessor()">Resultado</button>    
+    <div id="resultado"></div>
+</body>
+</html>
