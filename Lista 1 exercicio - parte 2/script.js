@@ -1,42 +1,54 @@
 //ATIVIDADE 11
 
-/* Que gere o preço de um carro ao consumidor e os valores pagos pelo imposto e pelo lucro do distribuidor, sabendo o custo de fábrica do carro e que são pagos:
+/* Que gere o preço de um carro ao consumidor e os valores pagos pelo imposto e pelo lucro do distribuidor, sabendo o custo de fábrica do 
+carro e que são pagos:
 a) de imposto: 45% sobre o custo do carro;
 b) de lucro do distribuidor: 12% sobre o custo do carro.*/
 
 function precoCarro(){
     var precoFabrica = parseFloat(document.querySelector("#precoFabrica").value);
-var imposto, lucro;
+    var imposto, lucro, precoConsumidor;
 
-imposto = precoFabrica * 45 / 100;
-lucro = precoFabrica * 12 / 100;
+    imposto = precoFabrica * 45 / 100;
+    lucro = precoFabrica * 12 / 100;
 
-precoFabrica = precoFabrica + imposto + lucro;
+    precoConsumidor = precoFabrica + imposto + lucro;
 
-document.querySelector("#resultado").innerHTML = precoFabrica;
-document.querySelector("#resultado2").innerHTML = imposto;
-document.querySelector("#resultado3").innerHTML = lucro;
+    document.querySelector("#resultado").innerHTML = "O preço do carro ao consumidor é: " + precoConsumidor;
+    document.querySelector("#resultado2").innerHTML = "Valor do imposto: " + imposto;
+    document.querySelector("#resultado3").innerHTML = "Lucro do distribuidor: " + lucro;
 }
 
-// ATIVIDADE 
+// ATIVIDADE 12
 
-/*Leia a velocidade máxima permitida em uma avenida e a velocidade com que o motorista estava dirigindo nela e calcule a multa que uma pessoa vai receber, sabendo que são pagos:
-a) 50 reais se o motorista estiver ultrapassar em até 10km/h a velocidade permitida (ex.: velocidade máxima: 50km/h; motorista a 60km/h ou a 56km/h); b) 100 reais, se o motorista ultrapassar de 11 a 30 km/h a velocidade permitida.
+/*Leia a velocidade máxima permitida em uma avenida e a velocidade com que o motorista estava dirigindo nela e calcule a multa que uma pessoa
+ vai receber, sabendo que são pagos:
+a) 50 reais se o motorista estiver ultrapassar em até 10km/h a velocidade permitida 
+(ex.: velocidade máxima: 50km/h; motorista a 60km/h ou a 56km/h);
+b) 100 reais, se o motorista ultrapassar de 11 a 30 km/h a velocidade permitida.
 c) 200 reais, se estiver acima de 31km/h da velocidade permitida.*/
 
 function velocidade(){
     var limiteVelocidade = parseInt(document.querySelector("#limiteVelocidade").value);
     var velocidadeMotorista = parseInt(document.querySelector("#velocidadeMotorista").value);
 
-    if(velocidadeMotorista < limiteVelocidade) document.querySelector("#resultado").innerHTML = "Sem multa";
-    else if(velocidadeMotorista > limiteVelocidade && velocidadeMotorista < limiteVelocidade + 10) document.querySelector("#resultado").innerHTML = "Multa de 50 reais";
-    else if(velocidadeMotorista > limiteVelocidade + 11 && velocidadeMotorista < limiteVelocidade + 30) document.querySelector("#resultado").innerHTML = "Multa de 100 reais";
-    else document.querySelector("#resultado").innerHTML = "Multa de 200 reais";
+    if(velocidadeMotorista < limiteVelocidade || velocidadeMotorista == limiteVelocidade) 
+    document.querySelector("#resultado").innerHTML = "Sem multa";
+
+    else if(velocidadeMotorista > limiteVelocidade && velocidadeMotorista < limiteVelocidade + 10) 
+    document.querySelector("#resultado").innerHTML = "Multa de 50 reais";
+
+    else if(velocidadeMotorista > limiteVelocidade + 11 && velocidadeMotorista < limiteVelocidade + 30) 
+    document.querySelector("#resultado").innerHTML = "Multa de 100 reais";
+
+    else if(velocidadeMotorista > limiteVelocidade + 31) 
+    document.querySelector("#resultado").innerHTML = "Multa de 200 reais";
 }
 
 // ATIVIDADE 13
 
-/*Sabendo que latão é constituído de 70% de cobre e 30% de zinco, indique a quantidade de cada um desses componentes para se obter uma certa quantidade de latão (requerida pelo usuário).
+/*Sabendo que latão é constituído de 70% de cobre e 30% de zinco, indique a quantidade de cada um desses componentes para se 
+obter uma certa quantidade de latão (requerida pelo usuário).
 */
 
 function elementosQuimicos(){
@@ -46,13 +58,14 @@ function elementosQuimicos(){
     cobre = quantidade * 70 / 100;
     zinco = quantidade * 30 / 100;
 
-    document.querySelector("#resultado").innerHTML = cobre;
-    document.querySelector("#resultado2").innerHTML = zinco;
+    document.querySelector("#resultado").innerHTML = "Quantidade de cobre: " + cobre;
+    document.querySelector("#resultado2").innerHTML = "Quantidade de zinco: " + zinco;
 }
 
 // ATIVIDADE 14
 
-/*Ler 2 números inteiros do teclado. Se o segundo for diferente de zero, calcular e imprimir o quociente do primeiro pelo segundo. Caso contrário, imprimir a mensagem: “DIVISÃO POR ZERO”.
+/*Ler 2 números inteiros do teclado. Se o segundo for diferente de zero, 
+calcular e imprimir o quociente do primeiro pelo segundo. Caso contrário, imprimir a mensagem: “DIVISÃO POR ZERO”.
 */
 
 function numeros(){
@@ -64,7 +77,7 @@ function numeros(){
         quociente = a / b;
         document.querySelector("#resultado").innerHTML = quociente;
     }
-    else document.querySelector("#resultado").innerHTML = "Divisão por zero"
+    else document.querySelector("#resultado").innerHTML = "Divisão por zero";
 }
 
 // ATIVIDADE 15
@@ -77,8 +90,8 @@ function maior(){
     var c = parseInt(document.querySelector("#c").value);
 
     if(a > b && a > c) document.querySelector("#resultado").innerHTML = "A é maior";
-    if(b > a && b > c) document.querySelector("#resultado").innerHTML = "B é maior";
-    if(c > a && c > b) document.querySelector("#resultado").innerHTML = "C é maior";
+    else if(b > a && b > c) document.querySelector("#resultado").innerHTML = "B é maior";
+    else document.querySelector("#resultado").innerHTML = "C é maior";
 
 }
 
@@ -140,18 +153,26 @@ function equacao(){
 
 // ATIVIDADE 18
 
-/* Ler três valores do teclado e dizer se eles formam um triângulo. Caso afirmativo, dizer seu tipo (equilátero, isósceles ou escaleno).*/
+/* Ler três valores do teclado e dizer se eles formam um triângulo. 
+Caso afirmativo, dizer seu tipo (equilátero, isósceles ou escaleno).*/
 
 function triangulo(){
     var primeiroValor = parseInt(document.querySelector("#primeiroValor").value);
     var segundoValor = parseInt(document.querySelector("#segundoValor").value);
     var terceiroValor = parseInt(document.querySelector("#terceiroValor").value);
 
-    if(primeiroValor >= segundoValor  + terceiroValor || segundoValor >= terceiroValor + primeiroValor || terceiroValor >= primeiroValor + segundoValor) document.querySelector("#resultado").innerHTML = "Os valores não formam um triângulo";
+    if(primeiroValor >= segundoValor  + terceiroValor ||
+         segundoValor >= terceiroValor + primeiroValor ||
+          terceiroValor >= primeiroValor + segundoValor) 
+          document.querySelector("#resultado").innerHTML = "Os valores não formam um triângulo";
 
-    else if(primeiroValor == segundoValor && primeiroValor == terceiroValor) document.querySelector("#resultado").innerHTML = "Triângulo Equilátero";
+    else if(primeiroValor == segundoValor && primeiroValor == terceiroValor) 
+    document.querySelector("#resultado").innerHTML = "Triângulo Equilátero";
 
-    else if(primeiroValor == segundoValor || segundoValor == terceiroValor || terceiroValor == primeiroValor) document.querySelector("#resultado").innerHTML = "Triângulo Isóceles";
+    else if(primeiroValor == segundoValor ||
+         segundoValor == terceiroValor ||
+          terceiroValor == primeiroValor) 
+          document.querySelector("#resultado").innerHTML = "Triângulo Isóceles";
 
     else document.querySelector("#resultado").innerHTML = "Triângulo Escaleno";
 }
@@ -179,7 +200,8 @@ function par(){
 
 // ATIVIDADE 20
 
-/*Que informe se um dado ano é ou não bissexto. Obs: um ano é bissexto se ele for divisível por 400 ou se ele for divisível por 4 e não por 100.*/
+/*Que informe se um dado ano é ou não bissexto. Obs: um ano é bissexto se 
+ele for divisível por 400 ou se ele for divisível por 4 e não por 100.*/
 
 function ano(){
     var ano = parseInt(document.querySelector("#ano").value);
