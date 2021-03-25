@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <title>Atividade 8</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="./index.html">Atividade 1</a></li>
+            <li><a href="./atividade6.html">Atividade 6</a></li>
+            <li><a href="./atividade8.html">Atividade 8</a></li>
+            <li><a href="./atividade11.html">Atividade 11</a></li>
+            <li><a href="./atividade15.html">Atividade 15</a></li>
+            <li><a href="./atividade18.html">Atividade 18</a></li>
+        </ul>
+    </div>
+    <div class="conteudo">
+        <h3>Com base na tabela de preços ao lado, faça um programa que leia o código de um item e a
+            quantidade deste item. A seguir, calcule e mostre o valor da conta a pagar.</h3>
+      
+        <table>
+            <tr>
+                <th>CÓDIGO</th>
+                <th>ESPECIFICACÃO</th>
+                <th>PREÇO</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Cachorro quente</td>
+                <td>R$4,00</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>X-salada</td>
+                <td>R$4,50</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>X-Bacon</td>
+                <td>R$5,00</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Torrada Simples</td>
+                <td>R$2,00</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Refrigerante</td>
+                <td>R$1,50</td>
+            </tr>
+        </table>
+
+        <p>Digite o código do item:</p> <input type="text" id="codigoItem">
+        <p>Digite a quantidade:</p> <input type="text" id="quantidadeItem">
+        <button type="button" onclick="fastfood()">Resultado</button>
+        <div id="resultado"></div> 
+    </div>
+</body>
+</html>

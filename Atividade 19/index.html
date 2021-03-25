@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <title>Index</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="./index.html">Atividade 1</a></li>
+            <li><a href="./atividade6.html">Atividade 6</a></li>
+            <li><a href="./atividade8.html">Atividade 8</a></li>
+            <li><a href="./atividade11.html">Atividade 11</a></li>
+            <li><a href="./atividade15.html">Atividade 15</a></li>
+            <li><a href="./atividade18.html">Atividade 18</a></li>
+        </ul>
+    </div>
+    <div class="conteudo">
+        <h3>Faça uma página web para tratar das autuações por excesso de
+            velocidade. Precisa ter um input onde o usuário digite a velocidade máxima
+            permitida pela via. Precisa ter um input onde o usuário digite a velocidade do
+            carro. Criar uma div para exibir o resultado. Dependendo da velocidade
+            exibir: <br><br>
+            Até 7 km/h acima da permitida pela via informar: Advertência - Acima de 7 km/h. <br>
+            Até 20% informar: Autuado. Infração Grave <br>
+            Entre 20% e 50% informar. Autuado. Infração gravíssima. <br>
+            Acima de 50% informar. Autuado.Infração gravíssima. Penalidade de suspensão do direito de dirigir.</h3>
+
+        <p>Digite a velocidade máxima da via:</p> <input type="text" id="velMax">
+        <p>Digite a velocidade do carro:</p> <input type="text" id="velCarro">
+        <button type="button" onclick="multa()">Resultado</button>
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>
