@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.container :is(h3,p,input){
+    margin: 20px 0;
+}
+
+table{
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border: 1px solid black;
+}
+
+table :is(td,th){
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#resultado{
+    margin-bottom: 30px;
+}
+
+ul{
+    line-height: 30px;
+}

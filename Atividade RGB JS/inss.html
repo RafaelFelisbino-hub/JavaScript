@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Salário</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="./index.html">RGB</a></li>
+            <li><a href="./inss.html">Salário</a></li>          
+        </ul>
+    </div>
+    <div class="container">
+        <h3>Faça um sistema para calcular o salário líquido de um funcionário (pessoa
+            física) regime CLT.</h3>
+        <p>Obs: Usar "ponto". Exemplo: 6443.50 = 6 mil, quatrocentos e quarenta e três reais e 50 centavos</p>
+        <p>Digite seu salário:</p><input type="text" id="salario">
+        <button type="button" onclick="salario()">Calcular</button>
+        <div id="resultado"></div>
+
+        <table>
+            <tr>
+                <th>Salário de Contribuição</th>
+                <th>Aliquota</th>
+            </tr>
+            <tr>
+                <td>Até R$ 1100,00</td>
+                <td>7.5%</td>
+            </tr>
+            <tr>
+                <td>De 1,100,01 até 2,203,48</td>
+                <td>9%</td>
+            </tr>
+            <tr>
+                <td>De 2,203,49 até 3,305,22</td>
+                <td>12%</td>
+            </tr>
+            <tr>
+                <td>De 3,305,23 até 6.443.57</td>
+                <td>14%</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
