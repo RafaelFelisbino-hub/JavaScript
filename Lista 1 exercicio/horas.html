@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+</head>
+<body>
+    <form action="#">
+        <label for="#">Digite a hora:</label>
+        <input type="text" id="horas"><br>
+        <label for="#">Digite a porcentagem:</label>
+        <input type="text" id="porcentagem"><br>
+        <button type="button" id="btn">Calcular</button>
+    </form>
+    <span class="res" id="res"></span>
+
+    <script>
+        var hora = parseFloat(document.getElementById('horas').value);
+        var porcentagem = parseFloat(document.getElementById('porcentagem').value);
+        const btn = document.getElementById('btn');
+        
+        btn.addEventListener('click', () => {
+            let a = porcentagem / 100;
+            let b = hora / 100 * a * 1000;
+            let c = b % 10;
+            c *= 6;
+            hora *= porcentagem / 100;
+            document.getElementById('res').innerHTML = `${Math.floor(hora)}horas, ${c}minutos`;
+        });
+    </script>
+</body>
+</html>
